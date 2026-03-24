@@ -13,3 +13,9 @@ class GameLogic:
             self.data.click_value += 1
             return True
         return False
+    
+    def save_game(self):
+        self.data.save()
+
+    def load_game(self):
+        return self.data.load()

@@ -1,5 +1,6 @@
 from data import GameData
 from logic import GameLogic
+import logic
 import presentation as ui
 
 def main():
@@ -20,6 +21,16 @@ def main():
                 print("Not enough points!")
 
         elif choice == "3":
+            logic.save_game()
+            print("Game saved!")
+
+        elif choice == "4":
+            if logic.load_game():
+                print("Game loaded!")
+            else:
+                print("No save file found.")
+
+        elif choice == "5":
             break
 
 if __name__ == "__main__":
