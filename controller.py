@@ -20,4 +20,14 @@ class GameController:
                     self.view.show_message("Not enough points!")
 
             elif choice == "3":
+                self.model.save()
+                self.view.show_message("Game saved!")
+
+            elif choice == "4":
+                if self.model.load():
+                    self.view.show_message("Game loaded!")
+                else:
+                    self.view.show_message("No save file found.")
+
+            elif choice == "5":
                 break
